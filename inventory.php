@@ -34,32 +34,24 @@ if (login_check($mysqli) == false) {
   </div>
 </div>
 
-<div class="content">
- <div class="grid-container">
- <div class="grid-item"><h1>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</h1>
- <p>Inventory List - Enter barcode to check stock balance</p>
-</div>
-<div class="grid-item"><form action="/action_page.php">
-  Item Number<br>
-  <input type="text" name="firstname" value="95812311231">
-  <br>
-  <input type="submit" value="Submit">
-</form> </div>
- <div class="grid-item"><table style="width:100%">
-  <tr>
-    <th>Item No</th>
-    <th>Quantity</th>
-  </tr>
-  <tr>
-    <td>95812311231</td>
-    <td>3</td>
-</table> 
-</div>
-</div>
-</div>
+<div class="content grid-container">
 
+<div class="grid-item"><form id="jsform" method="post">
+ <p>Inventory List - Enter barcode to check stock balance</p>
+   <input autofocus="autofocus" type="text" style="width:70%;" placeholder="Enter Barcode" name='barcode' required>
+   <input id="myBtn" style="width:25%;" type='submit' class="button" name='Submit' value='Submit'/>
+
+</form> </div>
+ <div class="grid-item">
+ 
+<?php include 'includes/invquery.php' ?> 
+ 
+</div>
+ </div>
 <div class="footer">
  <p>Copyright © 2018 by Brianware Inc</p>
 </div>
+
+<script type="text/JavaScript" src="js/entkey.js"></script> 
 </body>
 </html>

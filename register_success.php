@@ -20,7 +20,7 @@ if (login_check($mysqli) == false) {
 <body>
 <div class="topnav" id="topnav">
  <a href="#">Sales</a>
- <a href="#">Inventory</a>
+ <a href="inventory.php">Inventory</a>
  <a href="#">Report</a>
   <div class="dropdown active">
    <button class="dropbtn">Admin</button>
@@ -35,11 +35,12 @@ if (login_check($mysqli) == false) {
 </div>
 
 <div class="content grid-container">
+<div class="grid-item">
  <h1>Registration Successful</h1>
  
  
 <a href="adduser.php" class="button">Click here to add more user</a>
-</div>
+</div></div>
 
 <div class="footer">
  <p>Copyright © 2018 by Brianware Inc</p>

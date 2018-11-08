@@ -23,10 +23,11 @@ sec_session_start();
 </div>
 
 <div class="content grid-container">
+<div class="grid-item">
  <h1>Update Password Successful</h1>
 <p> You will be automatically <a href="includes/logout.php">logout </a> in <span id="countdowntimer">10 </span> seconds.</p>
 </div>
-
+</div>
 
 
 

@@ -10,7 +10,7 @@ if (isset($_POST['username'], $_POST['p'])) {
     
     if (login($username, $password, $mysqli) == true) {
         // Login success 
-        header("Location: ../home.php");
+        header("Location: ../inventory.php");
         exit();
     } else {
         // Login failed 

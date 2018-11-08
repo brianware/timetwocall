@@ -22,7 +22,7 @@ if (login_check($mysqli) == false) {
 <body>
 <div class="topnav" id="topnav">
  <a href="#">Sales</a>
- <a href="#">Inventory</a>
+ <a href="inventory">Inventory</a>
  <a href="#">Report</a>
   <div class="dropdown active">
    <button class="dropbtn">Admin</button>
@@ -37,6 +37,7 @@ if (login_check($mysqli) == false) {
 </div>
 
 <div class="content grid-container">
+<div class="grid-item">
  <h1>Create new user</h1>
  <?php
   if (!empty($error_msg)) {
@@ -55,9 +56,10 @@ if (login_check($mysqli) == false) {
    </ul>
   </li>
   <li>Your password and confirmation must match exactly</li>
- </ul>
+ </ul></div>
+ <div class="grid-item">
   <form method="post" name="registration_form" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
-            Username: <input type='text' name='username' id='username' /><br>
+            Username: <input autofocus="autofocus" type='text' name='username' id='username' /><br>
             Email: <input type="text" name="email" id="email" /><br>
             Password: <input type="password"
                              name="password" 
@@ -74,7 +76,7 @@ if (login_check($mysqli) == false) {
                                    this.form.confirmpwd);" /> 
   </form>
 </div>
-
+</div>
 <div class="footer">
  <p>Copyright © 2018 by Brianware Inc</p>
 </div>
