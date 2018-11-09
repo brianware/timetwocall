@@ -175,3 +175,8 @@ input {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+/* Style the input container */
+.topnav .login-container {
+  float: right;
+}
